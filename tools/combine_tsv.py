@@ -22,5 +22,5 @@ directory = rf"\\10.30.9.254\share\Frank\FBIQCal_Deal"
 output_file = rf"\\10.30.9.254\share\Frank\FBIQCal_Deal\allNTboot.tsv"
 
 # 调用函数进行合并
-merge_tsv_files(directory, output_file)
+#merge_tsv_files(directory, output_file)
 #list_all_file(directory, output_file)
