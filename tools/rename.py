@@ -10,4 +10,4 @@ for filename in os.listdir(source_dir):
         new_filename = filename.replace(old_str, new_str)
         old_fullpath = os.path.join(source_dir,filename)
         new_fullpath = os.path.join(source_dir,new_filename)
-        os.rename(old_fullpath,new_fullpath)
+        os.rename(new_fullpath,old_fullpath)
