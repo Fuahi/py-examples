@@ -1,4 +1,5 @@
 import os
+import csv
 import shutil
 
 
@@ -18,11 +19,16 @@ def list_all_file(directory, output_file):
             outfile.writelines(filename + "\n")  # 写入到输出文件
 
 def remove_file(directory, output_file):
-    with open(output_file, "r") as outfile:
-        lines = outfile.readlines()
-        for line in len(lines):
-            one_path = lines[line].split('\t')[len(lines)-1]
-            one_path = os.path.join(directory,lines[0])
+    with open(output_file, 'r') as file:
+        # 创建 CSV 读取器
+        reader = csv.reader(file, delimiter='\t')
+
+        # 遍历每一行
+        for row in reader:
+            # 获取最后一列的路径
+            file_path = row[-1]
+            # 拷贝文件到目标文件夹
+            shutil.copy(file_path, directory)
 
 
 
