@@ -21,7 +21,7 @@ def remove_file(directory, output_file):
     with open(output_file, "r") as outfile:
         lines = outfile.readlines()
         for line in len(lines):
-            one_path = lines[line].split('\t')[len(lines)-1] #这里要注意位置
+            one_path = lines[line].split('\t')[len(lines)-1]
             one_path = os.path.join(directory,lines[0])
 
 
