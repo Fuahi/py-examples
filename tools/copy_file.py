@@ -20,4 +20,3 @@ output_file = rf"\\10.30.9.254\Share\Frank\re-convert\allboot.tsv"
 
 # 调用函数进行合并
 remove_file(directory, output_file)
-#list_all_file(directory, output_file)
